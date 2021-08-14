@@ -4,5 +4,5 @@ source ${HTTPD_CONTAINER_SCRIPTS_PATH}/common.sh
 
 export HTTPD_RUN_BY_S2I=1
 
-echo "Hello World"
-exec run-httpd $@
+# Make startup log debug
+exec run-httpd -e debug $@
